@@ -109,6 +109,31 @@ print(selfish[::-1]) #reverse of the string
 
 # Immutability: single element in a string cannot be changed with assignment, entire string should be changed.
 
-# 
+# Builtin functions
+print(len('hellllloooo'))
+greet = 'helloooo'
+print(greet[0:len(greet)])
+quote = 'to be or not to be'
+print(quote.replace('be', 'me'))
+print(quote)
 
+# Booleans
+name = 'Lokesh'
+is_cool = False
+is_cool = True
+print(is_cool)
+
+# Exercise: type conversion
+name = 'Lokesh Reddy'
+age = 50
+relationship_status = 'single'
+
+relationship_status = 'it\'s complicated'
+print(relationship_status)
+
+print(" \n which year were you born? ")
+birthY = input()
+print(type(birthY))
+#age = 2022 - birth_y
+#print(f'your age is: {age}')
 
