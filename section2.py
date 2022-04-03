@@ -135,8 +135,8 @@ relationship_status = 'it\'s complicated'
 print(relationship_status)
 
 print(" \n which year were you born? ")
-birthY = input("year of birth: ")
-print(type(birthY))
+#birthY = input("year of birth: ")
+#print(type(birthY))
 #age = 2022 - birth_y
 #print(f'your age is: {age}')
 
@@ -152,8 +152,8 @@ like this
 without meaning and more lines'''
 
 # Password checker
-#input('kaykay')
-#input('secret')
+username = input('whats your username')
+password = input('whats your password?')
 
-print('{username}, password {password} is {passwordlen} letters long')
+print(f'{username}, password {password} is {len(password)} letters long')
 print('*' * 10)
