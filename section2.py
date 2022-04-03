@@ -2,6 +2,9 @@
 #print('Yelloooo ' + name)
 
 #Fundamental Data types
+from soupsieve import comments
+
+
 int 
 float
 bool
@@ -126,14 +129,31 @@ print(is_cool)
 # Exercise: type conversion
 name = 'Lokesh Reddy'
 age = 50
-relationship_status = 'single'
+relationship_status = 'single' # this assigns a string to the variable
 
 relationship_status = 'it\'s complicated'
 print(relationship_status)
 
 print(" \n which year were you born? ")
-birthY = input()
+birthY = input("year of birth: ")
 print(type(birthY))
 #age = 2022 - birth_y
 #print(f'your age is: {age}')
 
+# Commenting your code
+
+'''using control + backward slash  (shift + 7)
+line 1 comment 
+line 2 comment
+line3 comment
+unlimited number of comments
+just keeps going on and on
+like this
+without meaning and more lines'''
+
+# Password checker
+#input('kaykay')
+#input('secret')
+
+print('{username}, password {password} is {passwordlen} letters long')
+print('*' * 10)
