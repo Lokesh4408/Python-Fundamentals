@@ -158,7 +158,24 @@ without meaning and more lines'''
 password_length = len(password)
 hidden_password = '*' * password_length
 
-print(f'{username}, password {password} is {password_length} letters long')
+#print(f'{username}, password {password} is {password_length} letters long')
 print('*' * 10)
 
 # Lists in python
+li = [1,2,3,4,5]
+li2 = ['a', 'b', 'c']
+li3 = [1,2,'a', True]
+amazon_cart = ['notebooks', 
+               'sunglasses',
+               'toys',
+               'grapes'
+               ]
+amazon_cart[0] = 'laptop'
+new_cart = amazon_cart[:] # try assigning amazon cart without square brackets
+new_cart[0] = 'gum'
+print(new_cart)
+print(amazon_cart)
+
+# Data Structure: List slicing (lists are mutable)
+# Matrix
+
