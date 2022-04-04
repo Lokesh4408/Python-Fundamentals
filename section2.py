@@ -152,8 +152,13 @@ like this
 without meaning and more lines'''
 
 # Password checker
-username = input('whats your username')
-password = input('whats your password?')
+# username = input('whats your username? ')
+# password = input('whats your password? ')
 
-print(f'{username}, password {password} is {len(password)} letters long')
+password_length = len(password)
+hidden_password = '*' * password_length
+
+print(f'{username}, password {password} is {password_length} letters long')
 print('*' * 10)
+
+# Lists in python
