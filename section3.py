@@ -108,3 +108,38 @@ new_tuple = my_tuple
 print(new_tuple.count(5))
 print(my_tuple.index(5))
 print(len(my_tuple))
+
+
+# Sets: Set is an unordered collection of unique objects
+my_set = {1,2,3,4,5,5,6,6}
+my_set.add(100)
+my_set.add(2)
+print(my_set)
+
+# return only unique items from the below list
+my_list = [1,2,3,4,5,5]
+set1 = set(my_list)
+new_set = my_set.copy()
+print(set1)
+print(len(set1))
+my_set.clear()
+print(list(new_set))
+print(my_set)
+
+# Methods in Sets
+my_set = {1,2,3,4,5,6}
+your_set = {4,5,6,7,8,9,10}
+
+print(my_set.difference(your_set))
+print(my_set.discard(5))
+print(my_set)
+my_set.difference_update(your_set)
+print(my_set)
+print(my_set.intersection(your_set))
+print(my_set & your_set)
+print(my_set.isdisjoint(your_set))
+print(my_set.union(your_set))
+print(my_set | your_set)
+
+print(my_set.issubset(your_set))
+print(your_set.issuperset(my_set))
