@@ -183,6 +183,3 @@ matrix = [[1,2,3],
           [7,8,9]]
 
 print(matrix[0][1])
-
-# List Methods
-
