@@ -172,21 +172,13 @@ value = [[0] * 7] * 6 # np.array([np.zeros(6,7)])
 print('value with zeros:', value)
 for i in range(6):
     for k in range(7):
-        # value[i][j] = picture[i][j]
-        #print(picture[i][k])
         if picture[i][k] == 0:
-            #value[i][k] = ' '
-            #print(picture[i][k])
             print(' ', end='')
             #print(value[i][k])
         elif picture[i][k] == 1:
-            #value[i][k] = '*'
-            #print(picture[i][k])
             print('*', end='')
             #print(value[i][k])
-    print('')
-        
-#print('value without zeros: ', value)
+    print('')        
 
 #1 iterate over picture: solution
 for row in picture:
