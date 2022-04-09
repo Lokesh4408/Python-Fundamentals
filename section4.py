@@ -183,10 +183,25 @@ for i in range(6):
 #1 iterate over picture: solution
 for row in picture:
     for pixel in row:
-        if (pixel == 1):
+        if (pixel == 1): # if pixel:
             print('*', end='')
         else:
             print(' ', end='')
     print('')
 #2 if 0: print ' '
 #3 if 1: print *
+
+
+# clean, readability, predictability and DRY: do not repeat yourself
+
+
+# Find duplicates in list: Exercise problem
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+
+duplicates = []
+for value in some_list:
+    if some_list.count(value) > 1:
+        if value not in duplicates:
+            duplicates.append(value)
+        
+print(duplicates)
