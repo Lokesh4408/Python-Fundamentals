@@ -202,6 +202,97 @@ duplicates = []
 for value in some_list:
     if some_list.count(value) > 1:
         if value not in duplicates:
-            duplicates.append(value)
-        
+            duplicates.append(value)                
+
 print(duplicates)
+
+# Functions
+def say_hello():
+    print('Helloyo')
+    
+say_hello()
+
+def show_tree():
+    for row in picture:
+        for pixel in row:
+            if (pixel == 1): # if pixel:
+                print('*', end='')
+            else:
+                print(' ', end='')
+        print('')
+        
+show_tree()
+show_tree()
+show_tree()
+print(show_tree)
+
+
+# positional Parameters
+# default parameters
+def say_hello(name='kavya', emoji=':)'):
+    print(f'hellllooooo {name} {emoji}')
+    
+# positional Arguments
+say_hello('Lokesh', ';)')
+say_hello('Erik', ':D')
+
+
+# Default parameters and Keyword arguments
+say_hello(name='Lokesh', emoji=';)') # don't use this kind without order
+say_hello()
+
+
+# return: it exits automatically from a function
+def sum2(num1, num2):
+    return num1+num2
+    
+total = sum2(10,5)
+print(sum2(11,total)) # a function should do something really well and should return something.
+
+def sum_of_two(num1, num2):
+    def another_func(n1, n2):
+        return n1 + n2
+    return another_func(num1, num2)
+
+total = sum_of_two(10,5)
+print(total)
+
+# Tesla exercise
+def checkDriverAge(age=0):
+        # age = input("What is your age?: ")
+        if int(age) < 18:
+	        print("Sorry, you are too young to drive this car. Powering off") 
+        elif int(age) > 18:
+	        print("Powering On. Enjoy the ride!")
+        elif int(age) == 18:
+            print("Congratulations on your first year of driving. Enjoy the ride!")
+        
+checkDriverAge(18)
+    
+    
+# Methods vs Functions
+print('hello'.capitalize()) # methods are always owned by something unlike functions, in this case it is the string 'hello'.
+
+
+# Docstrings
+def test(a):
+    '''
+    Info: this function tests and prints so and so parameters'''
+    print(a)
+    
+#help(test)
+print(test.__doc__)
+
+
+# Clean code
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    #elif num % 2 != 0:
+    return False
+print(is_even(52))
+# cleaner way
+def is_even(num):
+    return num % 2 == 0 # this is efficient thinking
+    
+print(is_even(51))
