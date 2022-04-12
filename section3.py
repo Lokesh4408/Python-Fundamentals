@@ -1,8 +1,8 @@
 # List Methods
-basket = [1,2,3,4,5]
+basket = [1, 2, 3, 4, 5]
 
 # adding
-basket.append(100) 
+basket.append(100)
 basket.insert(5, 200)
 basket.extend([100, 101])
 new_list = basket
@@ -17,20 +17,21 @@ basket.clear()
 print(basket)
 print(new_list)
 
-basket = ['a','b','c','d','e', 'd']
+basket = ['a', 'b', 'c', 'd', 'e', 'd']
 print('d' in basket)
 print('i' in 'hi your are late')
 print(basket.index('b'))
 print(basket.count('d'))
 basket.sort()
 new_basket = basket.copy()
-print(sorted(basket)) # creates a new basket and sorts it without altering the original basket.
+# creates a new basket and sorts it without altering the original basket.
+print(sorted(basket))
 print(new_basket)
 basket.reverse()
 print(basket)
 
 # Common list patterns
-basket = ['a','x', 'b','c','d','e', 'd']
+basket = ['a', 'x', 'b', 'c', 'd', 'e', 'd']
 basket.sort()
 basket.reverse()
 sentence = ' '
@@ -38,12 +39,13 @@ new_sentence = sentence.join(['hi', 'my', 'name', 'is', 'Lokesh'])
 new_sentence2 = '   '.join(['still', 'the', 'same', 'string'])
 print(new_sentence)
 print(new_sentence2)
-print(basket[::-1]) # this just creates a new list without altering the original
+# this just creates a new list without altering the original
+print(basket[::-1])
 print(basket)
 print(list(range(101)))
 
 # List unpacking
-a,b,c, *other, d = [1,2,3,4,5,6,7,8,9]
+a, b, c, *other, d = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(a)
 print(other)
 print(d)
@@ -53,36 +55,37 @@ weapons = None
 
 # Dictionary: it is a datatype and also data structure
 dictionary = {
-    'a': [1,3,4],
+    'a': [1, 3, 4],
     'b': 'hello',
-    'x': True 
+    'x': True
 }
 
 my_list = [{
-    'a': [1,3,4],
+    'a': [1, 3, 4],
     'b': 'hello',
-    'x': True 
+    'x': True
 },
-{
-    'a': [5,6,7],
+    {
+    'a': [5, 6, 7],
     'b': 'hello',
-    'x': True 
-           }]
+    'x': True
+}]
 
 print(my_list[0]['a'][2])
 print(dictionary)
 
 # dictionaries are better than lists when you want to have more information stored.
-# dictionary keys are supposed to be immutable. A key in a dictionary has to be unique. 
+# dictionary keys are supposed to be immutable. A key in a dictionary has to be unique.
 
 user = {
-    'basket': [1,2,3],
+    'basket': [1, 2, 3],
     'greet': 'hello',
     'age': 23
 }
 print(user.get('age'))
-user2 = dict(name='Lokesh') # using built-in function dict.
-print(user.get('cow', 55)) # 55 is printed as default incase 'age' key is not available in dictionary.
+user2 = dict(name='Lokesh')  # using built-in function dict.
+# 55 is printed as default incase 'age' key is not available in dictionary.
+print(user.get('cow', 55))
 print(user2)
 print('hello' in user.values())
 
@@ -99,7 +102,7 @@ print(user2)
 
 
 # Tuples: 3rd data structure, these are immutable.
-my_tuple = (1,2,3,4,5,5)
+my_tuple = (1, 2, 3, 4, 5, 5)
 print(my_tuple[2])
 print(5 in my_tuple)
 print(user2.items())
@@ -111,13 +114,13 @@ print(len(my_tuple))
 
 
 # Sets: Set is an unordered collection of unique objects
-my_set = {1,2,3,4,5,5,6,6}
+my_set = {1, 2, 3, 4, 5, 5, 6, 6}
 my_set.add(100)
 my_set.add(2)
 print(my_set)
 
 # return only unique items from the below list
-my_list = [1,2,3,4,5,5]
+my_list = [1, 2, 3, 4, 5, 5]
 set1 = set(my_list)
 new_set = my_set.copy()
 print(set1)
@@ -127,8 +130,8 @@ print(list(new_set))
 print(my_set)
 
 # Methods in Sets
-my_set = {1,2,3,4,5,6}
-your_set = {4,5,6,7,8,9,10}
+my_set = {1, 2, 3, 4, 5, 6}
+your_set = {4, 5, 6, 7, 8, 9, 10}
 
 print(my_set.difference(your_set))
 print(my_set.discard(5))
