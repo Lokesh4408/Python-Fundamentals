@@ -6,6 +6,7 @@ def super_func(*args, **kwargs):
         total += items
     return sum(args) + total
 
+<<<<<<< HEAD
 
 print(super_func(1, 2, 3, 4, 5, num1=5, num2=6))
 
@@ -125,3 +126,7 @@ def outer():
 outer()
 
 print(help())
+=======
+print(super_func(1,2,3,4,5))
+
+>>>>>>> dffc9a63eefc12287fcef593cbf0fc139d2f9d41
