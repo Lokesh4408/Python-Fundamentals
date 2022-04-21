@@ -1,4 +1,9 @@
-from app import app
+# OOP
 
-if __name__ == "__main__":
-    app.run()
+class BigObject: # Class
+    #code
+    pass
+
+obj1 = BigObject() # instantiate
+obj2 = BigObject() # instantiate
+obj3 = BigObject() # instantiate 
