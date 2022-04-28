@@ -13,7 +13,7 @@ class PlayerCharacter:
 
     def run(self):
         print('run')
-        return 'done'
+        return self
 
     def shout(self):
         print(f'my name is {self.name}')
@@ -83,5 +83,6 @@ def get_oldest_cat(*args):
     return max(args)
 
 print(f'The oldest cat is {get_oldest_cat(peanut.age, garfield.age, snickers.age)} years old.')
+
 
  
