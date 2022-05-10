@@ -12,3 +12,5 @@ print(player1.age)
 player2 = {'name': 'andrei', 'age': 25}
 print(player2['name'])
 print(player2['age'])
+
+# Abstraction
