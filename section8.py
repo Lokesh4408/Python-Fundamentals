@@ -61,16 +61,29 @@ bye()
 
 
 def my_decorator1(func):
-    def wrap_func(x):
+    def wrap_func(x, y):
         print('***********')
-        func(x)
+        func(x, y)
         print('***********')
     return wrap_func
 
 
 @my_decorator1
-def hello(greeting):
-    print(greeting)
+def hello(greeting, emoji):
+    print(greeting, emoji)
 
 
-hello('hallo')
+hello('hallo', ':)' )
+
+def my_decorator2(func):
+    def wrap_func(*args, **kwargs):
+        print('***********')
+        func(*args, **kwargs)
+        print('***********')
+    return wrap_func
+
+@my_decorator2
+def hello(greetings, emoji=':('):
+    print(greetings, emoji)
+    
+hello('Hallöchen')
