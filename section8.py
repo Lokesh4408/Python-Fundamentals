@@ -1,138 +1,76 @@
-# Functional Programming
-from cv2 import multiply
+# Decorators
+def hello():
+    print('hellllloooo')
 
 
-def multiply_by2(li):
-    new_list = []
-    for item in li:
-        new_list.append(item * 2)
+greet = hello
+del hello
 
-    return new_list
+print(greet())
 
 
-print(multiply_by2([1, 2, 3]))
-
-# map, filter, zip and reduce
-# map()
-my_list = [1, 2, 3]
+def hello(func):
+    func()
 
 
-def multiply_by2(items):
-    return items*2
+def greet():
+    print('still here!')
 
 
-print(list(map(multiply_by2, my_list)))
-print(my_list)
-
-# filter()
-def check_odd(item):
-    return item % 2 != 0
-
-print(list(filter(check_odd, my_list)))
-
-# zip()
-your_list = [10,20,30]
-their_list = (5,15,25)
-print(list(zip(my_list, your_list, their_list)))
-
-# reduce()
-from functools import reduce
-
-def accumulator(acc, item):
-    print(acc, item)
-    return acc + item
-    
-print(reduce(accumulator, my_list, 0))
-
-# Exercise
-#1 Capitalize all of the pet names and print the list
-my_pets = ['sisi', 'bibi', 'titi', 'carla']
-
-def capitalize(string):
-    return string.upper()
-
-print(list(map(capitalize, my_pets)))
-
-
-#2 Zip the 2 lists into a list of tuples, but sort the numbers from lowest to highest.
-my_strings = ['a', 'b', 'c', 'd', 'e']
-my_numbers = [5,4,3,2,1]
-
-print(list(zip(my_strings, sorted(my_numbers))))
-
-
-#3 Filter the scores that pass over 50%
-scores = [73, 20, 65, 19, 76, 100, 88]
-
-def find(num):
-    return num > 50
-
-print(list(filter(find, scores)))
-
-
-#4 Combine all of the numbers that are in a list on this file using reduce (my_numbers and scores). What is the total?
-def sum(acc, item):
-    print(acc, item)
-    return acc + item
-
-print(reduce(sum, (my_numbers + scores)))
-
-# lambda expressions
-lambda param : action(param)
-print(list(map(lambda item: item * 2, my_list))) # when you are using the function only one time.
-print(list(filter(lambda item:item % 2 != 0, my_list)))
-print(reduce(lambda acc, item: acc + item, my_list))
-
-# Exercise
-# square
-my_list = [5,4,3]
-
-print(list(map(lambda item: item ** 2, my_list)))
-
-# List Sorting
-a = [(0,2), (4,3),(9,9),(10,-1)]
-a.sort(key = lambda x:x[1])
+a = hello(greet)
 print(a)
-# print(list(filter(lambda item:item)))
 
-# Comprehensions: list, set, dictionary
-my_list = [char for char in 'hello']
-my_list2 = [num for num in range(0,100)]
-my_list3 = [num*2 for num in range(0,100)]
-my_list4 = [num**2 for num in range(0,100) if num%2 == 0]
+# Higher Order Function HOF
 
-for char in 'hello':
-    my_list.append(char)
 
-print(my_list4)
+def greet(func):
+    func()
 
-# set comprehensions
-my_list = {char for char in 'hello'}
-my_list2 = {num for num in range(0,100)}
-my_list3 = [num*2 for num in range(0,100)]
-my_list4 = {num**2 for num in range(0,100) if num%2 == 0}
 
-print(my_list4)
+def greet2():
+    def func():
+        return 5
+    return func
 
-# dictionary comprehensions
-simple_dict = {
-    'a' : 1,
-    'b' : 2,
-    'c' : 3
-}
-my_dict = {key:value**2 for key,value in simple_dict.items() }
-print(my_dict)
+# Higher order functions are those which accepts functions as parameters or returns functions as an end result.
 
-# Exercise
-some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n', 'c']
 
-duplicates = []
-for value in some_list:
-    if some_list.count(value) > 1:
-        if value not in duplicates:
-            duplicates.append(value)
-            
-print(duplicates)
+# Decorator
 
-duplicates = list(set([x for x in some_list if some_list.count(x) > 1]))
-print(duplicates)
+def my_decorator(func):
+    def wrap_func():
+        print('**********')
+        func()
+        print('**********')
+    return wrap_func
+
+
+@my_decorator
+def hello():
+    print('hellllooooo')
+
+
+@my_decorator
+def bye():
+    print('see ya later')
+
+
+# my_decorator(hello)() - this should also do the same job as a decorator.
+hello()
+bye()
+
+
+def my_decorator1(func):
+    def wrap_func(x):
+        print('***********')
+        func(x)
+        print('***********')
+    return wrap_func
+
+
+@my_decorator1
+def hello(greeting):
+    print(greeting)
+
+
+hello('hallo')
