@@ -57,10 +57,15 @@ while True:
                 print('you might be a genius!')
                 break
         else:
-            print('hey arschloch, zwischen ein und feunfsehn.')
+            print('hey arschloch, zwischen ein und fünfsehn.')
     except (ValueError, TypeError):
         print('please enter a number to guess again: ')
         continue
     
+import pyjokes
+
+joke = pyjokes.get_joke('en','neutral')
+print(joke) # example of python jokes packages being used inside the program
+
 
 
