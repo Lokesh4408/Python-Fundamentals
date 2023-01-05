@@ -19,3 +19,13 @@ translator = Translator(to_lang="zh")
 text = "This is a pencil."
 translation = translator.translate(text)
 print(f'In chinese: {translation}- {text}')
+
+'''translator = Translator(to_lang="ja")
+try:
+    with open('./text.txt', mode='r') as my_file:
+        text = my_file.read()
+        translation = translator.translate(text)
+        with open('./test-ja.txt', mode='w') as my_file2:
+            my_file2.write(translation)
+except FileNotFoundError as e:
+    print('check your file path silly!')'''
