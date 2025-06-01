@@ -146,3 +146,5 @@ print(my_set | your_set)
 
 print(my_set.issubset(your_set))
 print(your_set.issuperset(my_set))
+
+# %%
